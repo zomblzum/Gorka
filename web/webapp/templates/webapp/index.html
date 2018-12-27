@@ -1,20 +1,19 @@
 {% extends "webapp/header.html" %}
 {% block content %}
+{% load staticfiles %}
+<center>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<a href="/services/">
+				<img src="{% static 'webapp/images/index/banner2.png' %}">
+			</a>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+</center>
 
-<div class="col-sm-20">
-	<br>
-	<center>
-		<h3>Some text</h3>
-	</center>
-</div>
 
 
 
-
-
-
-
-
-{% include "webapp/modules/test_module.html" %}
-{% include "webapp/modules/test_module2.html" %}
 {% endblock %}

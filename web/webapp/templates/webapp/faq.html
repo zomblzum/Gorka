@@ -6,7 +6,15 @@
 
 
 
-
+<center>
+	<div class="container-fluid">
+		{% for post in object_list %}
+			{{post.date}}
+			{{post.title}}
+			{{post.body}}
+		{% endfor %}
+	</div>
+</center>
 
 
 

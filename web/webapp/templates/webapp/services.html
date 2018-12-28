@@ -1,8 +1,18 @@
 {% extends "webapp/header.html" %}
 {% block content %}
+{% load staticfiles %}
 
-
-
+<center>
+	<div class="container-fluid">
+		{% for post in object_list %}
+			{{post.date}}
+			{{post.title}}
+			{{post.body}}
+			<img src="{% static 'webapp/images/services/' %}{{post.img}}" class="responsive-img" style='max-height:250px;max-width:250px' alt="face">
+			<br>
+		{% endfor %}
+	</div>
+</center>
 
 
 

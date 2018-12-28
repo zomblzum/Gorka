@@ -3,10 +3,15 @@
 {% load staticfiles %}
 
 <center>
-<div class="container-fluid">
-	{% for post in object_list %}
-		post.date<a>post.title</a><a>post.body</a>
-	{% endfor %}
-</div>
+	<div class="container-fluid">
+		{% for post in object_list %}
+			{{post.date}}
+			{{post.title}}
+			{{post.body}}
+			<img src="{% static 'webapp/images/ware/' %}{{post.img}}" class="responsive-img" style='max-height:250px;max-width:250px' alt="face">
+			<br>
+		{% endfor %}
+	</div>
 </center>
+
 {% endblock %}

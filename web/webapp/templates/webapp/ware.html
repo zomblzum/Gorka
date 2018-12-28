@@ -4,33 +4,9 @@
 
 <center>
 <div class="container-fluid">
-
-		<div class="row">
-			<div class="col-xs-3"></div>
-			<div class="col-xs-3">
-
-					<img src="{% static 'webapp/images/ware/1.jpg' %}" class="responsive-img" alt="face">
-
-			</div>
-			<div class="col-xs-3">
-
-					<a style="color:green">КЕРАТИН В РОЗНИЦУ</a><br>
-					<strong>20 грамм</strong> - 500 руб.<br>
-					<strong>50 грамм</strong> - 1000 руб.<br>
-					<strong>100 грамм</strong> - 1500 руб.<br>
-					<strong>250 грамм</strong> - 3000 руб.<br>
-			</div>
-			<div class="col-xs-3">
-					<a style="color:green">КЕРАТИН ОПТОМ</a><br>
-					<strong>500 грамм</strong> - <a style="color:red">5000 руб</a><br>
-					<strong>от 1 кг</strong> - <a style="color:red">9000 руб</a> за кг<br>
-					<strong>от 3 кг</strong> - <a style="color:red">8500 руб</a> за кг<br>
-					<strong>от 5 кг</strong> - <a style="color:red">8000 руб</a> за кг<br>
-					<strong>от 10 кг</strong>- <a style="color:red">7000 руб</a> за кг<br>		
-
-			</div>
-		</div>
-		</div>
+	{% for post in object_list %}
+		post.date<a>post.title</a><a>post.body</a>
+	{% endfor %}
 </div>
 </center>
 {% endblock %}

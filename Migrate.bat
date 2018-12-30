@@ -1,7 +1,13 @@
 cd /d %~dp0/web
 
+python manage.py migrate
+
+pause
+
 python manage.py makemigrations
 
-python manage.py migrate webapp 0002
+pause
+
+python manage.py migrate webapp 0009
 
 pause

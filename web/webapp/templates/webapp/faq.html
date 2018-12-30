@@ -1,24 +1,19 @@
 {% extends "webapp/header.html" %}
 {% block content %}
 
+<div class="col-md-8 col-md-offset-2 bg-success" align="left">
 
+		<h2>Часто задаваемые вопросы:</h2>
+		<hr>
+		<ul class='list-marked'>
+			{% for post in object_list %}
+				<li><h3>{{post.question}}</h3></li>
+				<li><h5>{{post.answer}}</h5></li>
+				<hr>
+			{% endfor %}
+		</ul>
 
-
-
-
-<center>
-	<div class="container-fluid">
-		{% for post in object_list %}
-			{{post.date}}
-			{{post.title}}
-			{{post.body}}
-		{% endfor %}
-	</div>
-</center>
-
-
-
-
+</div>
 
 
 

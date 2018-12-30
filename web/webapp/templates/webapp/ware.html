@@ -2,16 +2,37 @@
 {% block content %}
 {% load staticfiles %}
 
-<center>
-	<div class="container-fluid">
-		{% for post in object_list %}
-			{{post.date}}
-			{{post.title}}
-			{{post.body}}
-			<img src="{% static 'webapp/images/ware/' %}{{post.img}}" class="responsive-img" style='max-height:250px;max-width:250px' alt="face">
-			<br>
-		{% endfor %}
-	</div>
-</center>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2" >
+			{% for post in object_list %}
 
+				<div class="col-xs-4" style="width:500; height: 400px">
+					<img src="{% static 'webapp/images/ware/' %}{{post.img}}" class="responsive-img" style='height:250px;width:250px;' alt="face">
+					<h4>{{post.head}}</h4>
+
+					<h5><font color="orange">{{post.price}}</font> руб</h5>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal{{post.title}}">Подробнее</button>
+
+					<div class="modal fade" id="myModal{{post.title}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">{{post.head}}</h4>
+								</div>
+								<div class="modal-body">
+									{{post.info}}
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-info" data-dismiss="modal">Закрыть</button>
+								</div>
+							</div>
+						</div>
+					</div>		
+				</div>
+				
+			{% endfor %}
+		</div>
+	</div>
+	
 {% endblock %}

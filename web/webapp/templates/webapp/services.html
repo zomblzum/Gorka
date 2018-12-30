@@ -2,17 +2,35 @@
 {% block content %}
 {% load staticfiles %}
 
-<center>
-	<div class="container-fluid">
-		{% for post in object_list %}
-			{{post.date}}
-			{{post.title}}
-			{{post.body}}
-			<img src="{% static 'webapp/images/services/' %}{{post.img}}" class="responsive-img" style='max-height:250px;max-width:250px' alt="face">
-			<br>
-		{% endfor %}
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2" >
+			{% for post in object_list %}
+			<div class="col-md-6" style="width:550; height: 350px">
+				<table class="table" style="width:550;height: 300px">
+					<tr class="info">
+						<td style="vertical-align:center"><div style="width:500;height: 80px"><h4>{{post.head}}</h4></div></td>
+					</tr>
+					<tr class="info">
+						<td><strong>50 см+: </strong>{{post.sm50price}}</td>
+					</tr>
+					<tr class="info">
+						<td><strong>55 см+: </strong>{{post.sm55price}}</td>
+					</tr>
+					<tr class="info">
+						<td><strong>60 см+: </strong>{{post.sm60price}}</td>
+					</tr>
+					<tr class="info">
+						<td><strong>65 см+: </strong>{{post.sm65price}}</td>
+					</tr>
+					<tr class="info">
+						<td><strong>70 см+: </strong>{{post.sm70price}}</td>
+					</tr>
+				</table>
+			</div>
+				
+			{% endfor %}
+		</div>
 	</div>
-</center>
 
 
 

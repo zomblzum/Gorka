@@ -1,29 +1,98 @@
 {% extends "webapp/header.html" %}
 {% block content %}
 {% load staticfiles %}
-<center>
-	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">
-			<a href="/services/">
-				<img src="{% static 'webapp/images/index/banner2.png' %}">
-			</a>
-		</div>
-		<div class="col-md-3"></div>
-	</div>
-</center>
 
-<center>
-	<div class="container-fluid">
-		{% for post in object_list %}
-			{{post.date}}
-			{{post.title}}
-			{{post.body}}
-			<img src="{% static 'webapp/images/index/' %}{{post.img}}" class="responsive-img" style='max-height:250px;max-width:250px' alt="face">
-			<br>
-		{% endfor %}
+<div class="container-fluid text-center parent">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">	
+			<div style="background-color:#c6c5c7">
+				<a href="/services/"><img src="{% static 'webapp/images/index/banner2.png' %}"></a>
+			</div>
+		</div>
 	</div>
-</center>
+
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2"><hr></div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-4 col-md-offset-2">
+			<div class="bg-success">
+				<br>
+				<h3>Какие волосы мы принимаем?</h3><br>
+				Длина – от 50 см.<br><br>
+				Некрашенные<br><br>
+				Женские, мужские, детские<br><br>
+				<br>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="bg-danger">
+				<br>
+				<h3>Какие волосы мы не принимаем?</h3><br>
+				Спутанные, перевёрнутые, грубые и жёсткие<br><br>
+				Парики, шиньоны, накладные пряди, волосы купленные в магазине<br><br>
+				В плохом состоянии — после термической или химической обработки<br><br>
+				<br>
+			</div>
+		</div>
+		<br><br><br>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2"><hr></div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="bg-primary">
+				<br>
+				Желательно <strong>не срезать волосы заранее</strong> дома или в парикмахерской, а приехать к нам. <br>
+				Если вы хотите состричь волосы у нас, модельная стрижка бесплатно!<br>
+				Если вы все же решитесь самостоятельно отстричь волосы, то далее наши рекомендации.<br>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2"><hr></div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h3>Какие должны быть правильно срезанные волосы</h3>
+		</div>
+	</div>
+	
+	<br>
+	
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<table>
+				<tr class="bg-info" align="left">
+					<td>
+						<br>
+						<ul class='list-marked'>
+						  <li>Заранее помыть голову без использования масок, кондиционеров и бальзамов, только шампунем</li>
+						  <li>Высушить</li>
+						  <li>Чистые и сухие волосы разделяются на 2-4 зоны и закрепляются тугими хвостиками - если длина волос разная ИЛИ заплетается тугая коса с использованием двух резинок (у основания косы и на конце) - если большой объём и длина.</li>
+						  <li>Волосы срезаются, над резинками</li>
+						  <li>Срезанные волосы складываются в одноразовое бумажное полотенце не нарушая направление роста волос (т.е. так, как были срезаны)</li>
+						</ul>
+					</td>
+					<td>
+						<br>
+							В случае если <strong>волосы уже отстрижены</strong> – заплетите их в косу, чтобы они не спутались и туго перетяните их резинкой, чтобы избежать вычеса.
+							Не используйте средства для укладки, не сушите феном и не подвергайте никакому воздействию, лучше просто заплетите в косу.
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
 
 
 {% endblock %}

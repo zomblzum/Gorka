@@ -1,24 +1,26 @@
 {% extends "webapp/header.html" %}
 {% block content %}
-
+{% load staticfiles %}
 <div class="col-md-8 col-md-offset-2 bg-primary">
 
 	<div class="col-md-6">
 		<h3>Контакты:</h3><br>
 		
-		<h4>123</h4>
+		<h4>+7(965)211-46-60 </h4>
 		<h4>Оксана</h4><br>
 		
-		<h4>123</h4>
+		<h4>+7(903)534-37-52</h4>
 		<h4>Анастасия</h4><br>
 	</div>
 
 	<div class="col-md-6">
-		<h1>LOGO</h1>
-		<h3>Адрес:</h3><br>
-		<h4>Жопный переулок</h4>	
+	<br>
+		<img src="{% static 'webapp/images/logo2.png' %}" class="responsive-img" style='height:110px;width:100px;'>
+		<h3>Города:</h3><br>
+		<h4>Москва и Московская область</h4>	
+		<h4>Екатеринбург и Свердловская область</h4>
+	<br>
 	</div>
-
 
 
 </div>

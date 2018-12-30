@@ -5,25 +5,25 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2" >
 			{% for post in object_list %}
-			<div class="col-md-6" style="width:550; height: 350px">
-				<table class="table" style="width:550;height: 300px">
-					<tr class="info">
-						<td style="vertical-align:center"><div style="width:500;height: 80px"><h4>{{post.head}}</h4></div></td>
+			<div class="col-md-6" style="height: 380px">
+				<table class="table" style="height: 330px">
+					<tr class="info" style="height: 100px" >
+						<td style="vertical-align:middle"><h4>{{post.head}}</h4></td>
 					</tr>
 					<tr class="info">
-						<td><strong>50 см+: </strong>{{post.sm50price}}</td>
+						<td><p><strong>50 см+: </strong>{{post.sm50price}}</p></td>
 					</tr>
 					<tr class="info">
-						<td><strong>55 см+: </strong>{{post.sm55price}}</td>
+						<td><p><strong>55 см+: </strong>{{post.sm55price}}</p></td>
 					</tr>
 					<tr class="info">
-						<td><strong>60 см+: </strong>{{post.sm60price}}</td>
+						<td><p><strong>60 см+: </strong>{{post.sm60price}}</p></td>
 					</tr>
 					<tr class="info">
-						<td><strong>65 см+: </strong>{{post.sm65price}}</td>
+						<td><p><strong>65 см+: </strong>{{post.sm65price}}</p></td>
 					</tr>
 					<tr class="info">
-						<td><strong>70 см+: </strong>{{post.sm70price}}</td>
+						<td><div style="height: 50px;"><p><strong>70 см+: </strong>{{post.sm70price}}</p></div></td>
 					</tr>
 				</table>
 			</div>
